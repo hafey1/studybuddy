@@ -19,7 +19,7 @@ const Resources = [
     },
     {
          
-        'name': 'Bill Gates',
+        'name': 'Foo Bar',
         'college': 'Clemson University',
         'class code': "CSCP 6300",
         'class name': "applied data science",
