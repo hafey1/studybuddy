@@ -7,13 +7,16 @@ class App extends Component {
     super();
 
     this.state={
-      search:null
+      search:null,
+      landingPage: true,
+      listingPage: false,
+      resultPage: false
     }
   }
 
 
   searchResource = (event) => {
-        
+
     return null;
   }
   
