@@ -52,7 +52,7 @@ class App extends Component {
  
         }   
       }
-      if (foundSomething)
+      if (foundSomething) 
           this.setState({landingPage : false})
       return event.target.value 
     }
@@ -89,7 +89,7 @@ class App extends Component {
               placeholder="Enter item to be searched" 
               onKeyPress={(e)=>this.searchResource(e)} />
             <button onClick={()=>{console.log(this.state.searchResult)}}>Trouble</button>
-          </div > : <ViewRepo></ViewRepo> }
+          </div > : <div> <ViewRepo></ViewRepo></div>}
         </div>
         <footer>footer</footer>
       </div>

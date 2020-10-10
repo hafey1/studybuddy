@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 
+
 const columns = [
   { id: 'name', label: 'Name', minWidth: 170 },
   { id: 'code', label: 'ISO\u00a0Code', minWidth: 100 },
@@ -84,7 +85,7 @@ export default function StickyHeadTable() {
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
-        <Table stickyHeader aria-label="sticky table">
+        <Table stickyHeader aria-label="sticky table" style={{ height: 1000 }}>
           <TableHead>
             <TableRow>
               {columns.map((column) => (
@@ -128,3 +129,5 @@ export default function StickyHeadTable() {
     </Paper>
   );
 }
+
+
