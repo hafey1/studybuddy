@@ -145,8 +145,6 @@ class App extends Component {
               <IconButton onClick={()=>{console.log(this.state.searchResult)}}><SearchIcon/></IconButton>
               </div>
             </div> : <div> <ViewRepo></ViewRepo></div>}
-
-=======
         
         <nav><button>Logo</button>Sign in</nav>
         <div className="container">
@@ -160,7 +158,6 @@ class App extends Component {
               onKeyPress={(e)=>this.searchResource(e)} />
             <button onClick={()=>{console.log(this.state.searchResult)}}>Trouble</button>
           </div > : <div> <ViewRepo></ViewRepo></div>}
->>>>>>> 3d8a46f345f74260f3489f01281c1549452a27ff
         </div>
         <footer>footer</footer>
       </div>
