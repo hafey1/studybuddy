@@ -57,7 +57,11 @@ class App extends Component {
           this.setState({searchResult : added})
         }   
       }
+<<<<<<< HEAD
       if (foundSomething) { 
+=======
+      if (foundSomething) 
+>>>>>>> 3d8a46f345f74260f3489f01281c1549452a27ff
           this.setState({landingPage : false})
           this.setState({listingPage : true })
           return event.target.value
@@ -84,6 +88,7 @@ class App extends Component {
     })
     return (
       <div className="parent">
+<<<<<<< HEAD
         <nav>
           <EmojiPeopleTwoToneIcon className="emoji" />
           
@@ -146,6 +151,21 @@ class App extends Component {
               </div>
             </div> : <div> <ViewRepo></ViewRepo></div>}
 
+=======
+        
+        <nav><button>Logo</button>Sign in</nav>
+        <div className="container">
+        
+          <aside style={{backgroundColor: "whitesmoke"}}>Friends<p>update Feed</p><br></br></aside>
+          { 
+            this.state.landingPage ? <div className="searchbar">
+             <input 
+              type="text" 
+              placeholder="Enter item to be searched" 
+              onKeyPress={(e)=>this.searchResource(e)} />
+            <button onClick={()=>{console.log(this.state.searchResult)}}>Trouble</button>
+          </div > : <div> <ViewRepo></ViewRepo></div>}
+>>>>>>> 3d8a46f345f74260f3489f01281c1549452a27ff
         </div>
         <footer>footer</footer>
       </div>
