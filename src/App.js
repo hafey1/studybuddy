@@ -7,20 +7,47 @@ class App extends Component {
     super();
 
     this.state={
-      search:null,
+      searchResult: [],
+      fakeData: Resources,
       landingPage: true,
       listingPage: false,
-      resultPage: false
+      resultPage: false,
+      obj: {a : "aetest1", b : "test2"}
     }
   }
 
+ 
+  
+  findSpecificStr = (obj, str) => {
+    console.log("I found " + str + "   " + Object.values(obj).includes(str))
+    return Object.values(obj).includes(str);
+  }
+  
+
 
   searchResource = (event) => {
+    let foundSomething = false
+    if(event.key === 'Enter') {
+      for(let i = 0; i < this.state.fakeData.length; i++){
+        if (this.findSpecificStr(this.state.fakeData[i], event.target.value)) {
+          
+          foundSomething = true
+          let added = this.state.searchResult
+          added.push(this.state.fakeData[i])
 
-    return null;
+          this.setState({searchResult : added})
+ 
+        }   
+      }
+      if (foundSomething)
+          this.setState({landingPage : false})
+      return event.target.value 
+    }
+    return null
   }
   
   render(){
+
     const items = Resources.map(data=>{
       return(
       
@@ -44,8 +71,8 @@ class App extends Component {
               type="text" 
               placeholder="Enter item to be searched" 
               onKeyPress={(e)=>this.searchResource(e)} />
+            <button onClick={()=>{console.log(this.state.searchResult)}}>Trouble</button>
             </div>
-     
         </div>
         <footer>footer</footer>
       </div>
