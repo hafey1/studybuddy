@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import './App.scss';
+import EmojiPeopleTwoToneIcon from '@material-ui/icons/EmojiPeopleTwoTone';
+import SearchIcon from '@material-ui/icons/Search';
+import IconButton from '@material-ui/core/IconButton';
+import SettingsIcon from '@material-ui/icons/Settings';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Resources from './resources';
 
 class App extends Component {
@@ -27,7 +33,7 @@ class App extends Component {
   searchResource = (event) => {
     let foundSomething = false
     if(event.key === 'Enter') {
-      for(let i = 0; i < this.state.fakeData.length; i++){
+      for(let i = 0; i < this.state.fakeData.length; i++) {
         if (this.findSpecificStr(this.state.fakeData[i], event.target.value)) {
           
           foundSomething = true
@@ -38,9 +44,11 @@ class App extends Component {
  
         }   
       }
-      if (foundSomething)
+      if (foundSomething) {
           this.setState({landingPage : false})
-      return event.target.value 
+          this.setState({listingPage : true })
+          return event.target.value
+      } 
     }
     return null
   }
@@ -61,16 +69,33 @@ class App extends Component {
     })
     return (
       <div className="parent">
-        <nav><button>Logo</button>Sign in</nav>
+        <nav>
+          <EmojiPeopleTwoToneIcon className="emoji" />
+          
+
+            <ButtonGroup className="signInSettings"
+              orientation="horizontal"
+              color="primary"
+              aria-label="horizontal outlined primary button group"
+              >
+              
+              <Button>Sign In</Button>
+              <IconButton>
+                <SettingsIcon/>
+              </IconButton>
+              
+          
+            </ButtonGroup>
+        </nav>
         <div className="container">
         
           <aside style={{backgroundColor: "whitesmoke"}}>Friends<p>update Feed</p><br></br></aside>
           <div className="searchbar">
             <input 
               type="text" 
-              placeholder="Enter item to be searched" 
+              placeholder="Search for Resources" 
               onKeyPress={(e)=>this.searchResource(e)} />
-            <button onClick={()=>{console.log(this.state.searchResult)}}>Trouble</button>
+            <IconButton onClick={()=>{console.log(this.state.searchResult)}}><SearchIcon/></IconButton>
             </div>
         </div>
         <footer>footer</footer>
