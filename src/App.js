@@ -1,3 +1,5 @@
+// App js from Cole Branch
+// Class to display: "College of Charleston CSCI 230"
 import React, { Component } from 'react';
 import './App.scss';
 import EmojiPeopleTwoToneIcon from '@material-ui/icons/EmojiPeopleTwoTone';
@@ -7,6 +9,18 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Resources from './resources';
+import ViewRepo from './ViewRepo'
+import TableTest from './TableTest'
+
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
 
 class App extends Component {
   constructor() {
@@ -41,10 +55,9 @@ class App extends Component {
           added.push(this.state.fakeData[i])
 
           this.setState({searchResult : added})
- 
         }   
       }
-      if (foundSomething) {
+      if (foundSomething) { 
           this.setState({landingPage : false})
           this.setState({listingPage : true })
           return event.target.value
@@ -57,7 +70,7 @@ class App extends Component {
 
     const items = Resources.map(data=>{
       return(
-      
+        <div>
         <ul>
           <li style={{position:'relative',left:'10vh'}}>
             <span>{data.name}</span>
@@ -65,6 +78,8 @@ class App extends Component {
             <a href={JSON.stringify(data.link)}>{JSON.stringify(data.link)}</a>
           </li>
         </ul>
+        </div>
+        
       )
     })
     return (
@@ -120,6 +135,7 @@ class App extends Component {
             </div>
             
               </aside>
+              { this.state.landingPage ?
           <div className="backgroundSearchBar">   
             <div className="searchbar">
               <input 
@@ -128,7 +144,8 @@ class App extends Component {
                 onKeyPress={(e)=>this.searchResource(e)} />
               <IconButton onClick={()=>{console.log(this.state.searchResult)}}><SearchIcon/></IconButton>
               </div>
-            </div> 
+            </div> : <div> <ViewRepo></ViewRepo></div>}
+
         </div>
         <footer>footer</footer>
       </div>
