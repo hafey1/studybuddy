@@ -58,6 +58,7 @@ class App extends Component {
         }   
       }
       if (foundSomething) { 
+          console.log("Hello")
           this.setState({landingPage : false})
           this.setState({listingPage : true })
           return event.target.value
@@ -82,6 +83,7 @@ class App extends Component {
         
       )
     })
+
     return (
       <div className="parent">
         <nav>
@@ -90,7 +92,7 @@ class App extends Component {
 
             <ButtonGroup className="signInSettings"
               orientation="horizontal"
-              color="primary"
+              color="white"
               aria-label="horizontal primary button group"
               variant="text"
               >
@@ -131,33 +133,27 @@ class App extends Component {
               
               <div className="colleges">
                     <Button>Your Colleges</Button>
+                    <Button variant="contained" className="smallLine" disableElevation>College of Charleston</Button>
+                    <Button variant="contained" className="smallLine" disableElevation>Harvard University</Button>
+                    <Button variant="contained" className="smallLine" disableElevation>Oxford University</Button>
+                    <Button variant="contained" className="smallLine" disableElevation>Cornell University</Button>
+
               </div>
             </div>
             
               </aside>
               { this.state.landingPage ?
-          <div className="backgroundSearchBar">   
+          
+                <div className="backgroundSearchBar">   
             <div className="searchbar">
               <input 
                 type="text" 
-                placeholder="Search for Resources" 
+                placeholder="Search for your college, class, or classmate" 
                 onKeyPress={(e)=>this.searchResource(e)} />
-              <IconButton onClick={()=>{console.log(this.state.searchResult)}}><SearchIcon/></IconButton>
+              <IconButton style= {{borderRadius: "0%", backgroundColor : "rgba(224,224,224, .6)" }} onClick={()=>{console.log(this.state.searchResult)}}><SearchIcon/></IconButton>
               </div>
-            </div> : <div> <ViewRepo></ViewRepo></div>}
-        
-        <nav><button>Logo</button>Sign in</nav>
-        <div className="container">
-        
-          <aside style={{backgroundColor: "whitesmoke"}}>Friends<p>update Feed</p><br></br></aside>
-          { 
-            this.state.landingPage ? <div className="searchbar">
-             <input 
-              type="text" 
-              placeholder="Enter item to be searched" 
-              onKeyPress={(e)=>this.searchResource(e)} />
-            <button onClick={()=>{console.log(this.state.searchResult)}}>Trouble</button>
-          </div > : <div> <ViewRepo></ViewRepo></div>}
+            </div> : <div className="Repo"> <ViewRepo></ViewRepo></div>}
+
         </div>
         <footer>footer</footer>
       </div>
