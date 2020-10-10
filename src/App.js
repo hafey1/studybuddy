@@ -1,3 +1,4 @@
+// App js from Cole Branch
 import React, { Component } from 'react';
 import './App.scss';
 import Resources from './resources';
