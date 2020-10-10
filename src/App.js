@@ -76,10 +76,11 @@ class App extends Component {
             <ButtonGroup className="signInSettings"
               orientation="horizontal"
               color="primary"
-              aria-label="horizontal outlined primary button group"
+              aria-label="horizontal primary button group"
+              variant="text"
               >
               
-              <Button>Sign In</Button>
+              <Button>Account</Button>
               <IconButton>
                 <SettingsIcon/>
               </IconButton>
@@ -89,7 +90,22 @@ class App extends Component {
         </nav>
         <div className="container">
         
-          <aside style={{backgroundColor: "whitesmoke"}}>Friends<p>update Feed</p><br></br></aside>
+          <aside style={{backgroundColor: "whitesmoke"}}>
+              <div className="friendTab">
+                <Button variant="contained" style={{width : "100%"}}>friends</Button>
+                <div className="friends">
+                  <Button>Bill Gates</Button>
+                  <Button>Jeff Bezos</Button>
+                  <Button>Elon Musk</Button>
+                  <Button>Albert Einstein</Button>
+                  <Button>Gottleb Frege</Button>
+                  <Button>Baruch Spinoza</Button>
+              </div>
+            </div>
+            <div className="favorites">
+              Favorites
+            </div>
+            </aside>
           <div className="searchbar">
             <input 
               type="text" 

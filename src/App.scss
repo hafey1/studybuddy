@@ -12,10 +12,42 @@ body {
   grid-row: 1;
 }
 
+
+
 .emoji {
 grid-column: 1;
 grid-row: 1;
 }
+
+aside {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 80%;
+
+}
+
+.friendTab {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 18% 80%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.friends {
+  display: grid;
+  margin-top: 4px;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  overflow-y: scroll;
+}
+
+.favorites {
+  display: grid;
+  grid-template-columns: 100%;
+
+}
+
 
 nav {
   display: grid;
