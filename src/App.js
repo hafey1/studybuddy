@@ -1,4 +1,5 @@
 // App js from Cole Branch
+// Class to display: "College of Charleston CSCI 230"
 import React, { Component } from 'react';
 import './App.scss';
 import Resources from './resources';
@@ -88,7 +89,7 @@ class App extends Component {
               placeholder="Enter item to be searched" 
               onKeyPress={(e)=>this.searchResource(e)} />
             <button onClick={()=>{console.log(this.state.searchResult)}}>Trouble</button>
-          </div > : <TableTest></TableTest> }
+          </div > : <ViewRepo></ViewRepo> }
         </div>
         <footer>footer</footer>
       </div>
