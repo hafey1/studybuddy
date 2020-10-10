@@ -98,21 +98,37 @@ class App extends Component {
                   <Button>Jeff Bezos</Button>
                   <Button>Elon Musk</Button>
                   <Button>Albert Einstein</Button>
-                  <Button>Gottleb Frege</Button>
+                  <Button>Gottlieb Frege</Button>
                   <Button>Baruch Spinoza</Button>
               </div>
             </div>
+            
             <div className="favorites">
-              Favorites
+              <div style={{backgroundColor: "black" }}></div>
+              
+              <div className="subjects"> 
+                    <Button className="smallLine" disableElevation>Your Subjects</Button>
+                    <Button variant="contained" className="smallLine" disableElevation>*New Post* Linear Algebra</Button>
+                    <Button variant="contained" className="smallLine" disableElevation>*New Post* Calculus</Button>
+                    <Button variant="contained" className="smallLine" disableElevation>*New Post* Organic Chemistry</Button>
+                    <Button variant="contained" className="smallLine" disableElevation>*New Post* British Literature: Charles Dickens</Button>
+              </div>
+              
+              <div className="colleges">
+                    <Button>Your Colleges</Button>
+              </div>
             </div>
-            </aside>
-          <div className="searchbar">
-            <input 
-              type="text" 
-              placeholder="Search for Resources" 
-              onKeyPress={(e)=>this.searchResource(e)} />
-            <IconButton onClick={()=>{console.log(this.state.searchResult)}}><SearchIcon/></IconButton>
-            </div>
+            
+              </aside>
+          <div className="backgroundSearchBar">   
+            <div className="searchbar">
+              <input 
+                type="text" 
+                placeholder="Search for Resources" 
+                onKeyPress={(e)=>this.searchResource(e)} />
+              <IconButton onClick={()=>{console.log(this.state.searchResult)}}><SearchIcon/></IconButton>
+              </div>
+            </div> 
         </div>
         <footer>footer</footer>
       </div>

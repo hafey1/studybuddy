@@ -45,9 +45,28 @@ aside {
 .favorites {
   display: grid;
   grid-template-columns: 100%;
-
+  grid-template-rows: 5% 35% 60%;
 }
 
+.subjects {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 4ch auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.smallLine {
+  line-height: 5px;
+}
+
+.colleges {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 4ch auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 
 nav {
   display: grid;
@@ -109,9 +128,22 @@ input {
   to {background-color: grey;}
 }
 
+.backgroundSearchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./Background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+
 .searchbar {
+  
+  top: 40%;
   display: grid;
-  width: 20%;
+  width: 30%;
+  text-align: center;
   margin: auto;
   overflow-x: inherit;
   grid-template-columns: 80% 20%;
