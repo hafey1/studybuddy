@@ -57,11 +57,7 @@ class App extends Component {
           this.setState({searchResult : added})
         }   
       }
-<<<<<<< HEAD
       if (foundSomething) { 
-=======
-      if (foundSomething) 
->>>>>>> 3d8a46f345f74260f3489f01281c1549452a27ff
           this.setState({landingPage : false})
           this.setState({listingPage : true })
           return event.target.value
@@ -88,7 +84,6 @@ class App extends Component {
     })
     return (
       <div className="parent">
-<<<<<<< HEAD
         <nav>
           <EmojiPeopleTwoToneIcon className="emoji" />
           
