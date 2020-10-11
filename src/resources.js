@@ -34,7 +34,10 @@ const Resources = [
         'class_name': "data organization and management",
         'topic' : "tool",
         'link': 'https://pandas.pydata.org/docs/'
-    },
+    }, {
+        'name': "College of Charleston CSCI 230"
+
+    }
 ]
 
 

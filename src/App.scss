@@ -34,6 +34,7 @@ aside {
   overflow-x: hidden;
 }
 
+
 .friends {
   display: grid;
   margin-top: 4px;
@@ -43,10 +44,11 @@ aside {
 }
 
 .favorites {
+  background-color: rgb(208, 225, 241);
   max-height: 90%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 5% 35% 60%;
+  grid-template-rows: 10% 35% 55%;
 }
 
 .subjects {
@@ -58,6 +60,7 @@ aside {
 }
 
 .smallLine {
+  background-color: rgba(251, 251, 251, 0.87);
   line-height: 5px;
 }
 
@@ -74,15 +77,14 @@ nav {
   display: grid;
   grid-template-columns: 10% auto 7.5%;
   grid-template-rows: 100%;
-  background-color: rgba( 50, 100, 129, .8);
+  background-color: rgba(208, 225, 241, .8);
   grid-column: 1 / 3;
   grid-row: 1;
 }
 
 footer {
   padding-bottom: 10;
-  background-color: #24992e;
-  
+  background-color: rgba(208, 225, 241, .8);
   grid-column: 1 / 3;
   grid-row: 3;
   z-index: 2;
@@ -101,12 +103,18 @@ input {
   font-weight: 400;
   line-height: normal;
   background-color: rgba(#d0e1f1, .8);
-  color: #282828;
+  color: #070707;
   outline: none;
   box-shadow: 0px 4px 20px 0px transparent;
   transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out, 0.1s padding ease-in-out;
   -webkit-appearance: none;
 }
+
+input:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
 .parent {
   display: grid;  
   height: 100vh;
@@ -132,13 +140,14 @@ input {
 
 .backgroundSearchBar {
   display: flex;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   background-image: url("./Background.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   overflow-y: hidden;
-
+  overflow-x: hidden;
 }
 
 .repo {
@@ -154,7 +163,7 @@ input {
   width: 30%;
   text-align: center;
   margin: auto;
-  overflow-x: inherit;
+  overflow-x: hidden;
   grid-template-columns: 80% 20%;
   grid-template-rows: 100%;
 }
@@ -171,10 +180,7 @@ transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 border-radius: 0%;
 }
 
-input:hover {
-  background-color: rgba(255, 255, 255, 0.945);
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
-}
+
 
 //.searchbar a p {display: inline;}
 

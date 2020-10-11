@@ -69,6 +69,11 @@ class App extends Component {
   
   render(){
 
+
+    const smallbuttons = () => {
+      return "backgroundColor: rgba(251, 251, 251, 0.87)"
+    }
+
     const items = Resources.map(data=>{
       return(
         <div>
@@ -121,22 +126,23 @@ class App extends Component {
             </div>
             
             <div className="favorites">
-              <div style={{backgroundColor: "black" }}></div>
+              <div style={{backgroundColor: "rgba(208, 225, 241, .8)" }}></div>
               
-              <div className="subjects"> 
-                    <Button className="smallLine" disableElevation>Your Subjects</Button>
-                    <Button variant="contained" className="smallLine" disableElevation>*New Post* Linear Algebra</Button>
-                    <Button variant="contained" className="smallLine" disableElevation>*New Post* Calculus</Button>
-                    <Button variant="contained" className="smallLine" disableElevation>*New Post* Organic Chemistry</Button>
-                    <Button variant="contained" className="smallLine" disableElevation>*New Post* British Literature: Charles Dickens</Button>
+              <div className="friendTab">
+              <Button  variant="contained" style={{width : "100%"}}>Your Subjects</Button>
+              <div className="friends">
+                    <Button>*New Post* Linear Algebra</Button>
+                    <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} >*New Post* Calculus</Button>
+                    <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>*New Post* Organic Chemistry</Button>
+                    <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>*New Post* British Literature: Charles Dickens</Button>
+                  </div>
               </div>
-              
               <div className="colleges">
-                    <Button>Your Colleges</Button>
-                    <Button variant="contained" className="smallLine" disableElevation>College of Charleston</Button>
-                    <Button variant="contained" className="smallLine" disableElevation>Harvard University</Button>
-                    <Button variant="contained" className="smallLine" disableElevation>Oxford University</Button>
-                    <Button variant="contained" className="smallLine" disableElevation>Cornell University</Button>
+                    <Button variant= "contained">Your Colleges</Button>
+                    <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>College of Charleston</Button>
+                    <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>Harvard University</Button>
+                    <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>Oxford University</Button>
+
 
               </div>
             </div>
@@ -155,7 +161,11 @@ class App extends Component {
             </div> : <div className="Repo"> <ViewRepo></ViewRepo></div>}
 
         </div>
-        <footer>footer</footer>
+        <footer>
+        <Button>Privacy Policy</Button>
+         <Button>About Us</Button>
+         <Button>Help</Button>
+        </footer>
       </div>
     );
   }
