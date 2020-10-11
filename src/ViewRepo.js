@@ -9,6 +9,18 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 
+const styles = {
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    borderRadius: 3,
+    border: 0,
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  },
+};
+
 const columns = [
     {
          id: 'title',
@@ -39,13 +51,13 @@ const rows = [
     createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Good Recursion Practice Problems</a>, 'Website', 2, '2020-02-12','Stevie'),
     createData(<a href={"https://leetcode.com/explore/learn/card/machine-learning-101/"}>Machine Learning Concepts</a>, 'Website (LeetCode)', 10, '2020-01-26','Grace'),
     createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Microsoft Azure Student Trial</a>, 'Website', 14, '2019-12-11','Kelly'),
-    createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Good Binary Tree Explanation</a>, 'Website', 4, '2019-11-14','Caroline'),
+    createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Free Codecademy Code</a>, 'Website', 4, '2019-11-14','Caroline'),
     createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Good Binary Tree Explanation</a>, 'Website', 0, '2019-02-01','Christian'),
     createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Recursion Basics</a>, 'Youtube Video', 0, '2018-11-12','Jeb'),
-    createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Good Binary Tree Explanation</a>, 'PDF', 5, '2018-05-20','Dustin'),
-    createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Good Binary Tree Explanation</a>, 'PDF', 7, '2018-05-17','Beau'),
-    createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Good Binary Tree Explanation</a>, 'Youtube Video', 1, '2018-02-03','Sean'),
-    createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Good Binary Tree Explanation</a>, 'Youtube Video', 2, '2017-10-01','Brian'),
+    createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>How to enact a linked list</a>, 'PDF', 5, '2018-05-20','Dustin'),
+    createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Database Concepts 101</a>, 'PDF', 7, '2018-05-17','Beau'),
+    createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>SQL Tutorial</a>, 'Youtube Video', 1, '2018-02-03','Sean'),
+      createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>High level interview prep</a>, 'Youtube Video', 2, '2017-10-01','Brian'),
     createData(<a href={"https://www.trekbikesofmountpleasant.com/"}>Microsoft interview prep</a>, 'Website (LeetCode)', 0, '2017-06-01','Claudia'),
 ];
 
@@ -82,7 +94,7 @@ export default function StickyHeadTable() {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ minWidth: column.minWidth, backgroundColor: "rgba(224,224,224, 1)" }}
                 >
                   {column.label}
                 </TableCell>
