@@ -5,6 +5,7 @@ import './App.scss';
 import EmojiPeopleTwoToneIcon from '@material-ui/icons/EmojiPeopleTwoTone';
 import SearchIcon from '@material-ui/icons/Search';
 import IconButton from '@material-ui/core/IconButton';
+import Badge from '@material-ui/core/Badge';
 import SettingsIcon from '@material-ui/icons/Settings';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
@@ -106,7 +107,10 @@ class App extends Component {
               <Button style={{color : "white"}}>Account</Button>
                
               <IconButton>
-                <NotificationsNoneIcon style={{color : "white"}}/>
+                <Badge badgeContent={4} color="primary">
+            
+                  <NotificationsNoneIcon style={{color : "white"}}/>
+                </Badge>
               </IconButton>
               <IconButton>
                 <SettingsIcon style={{color : "white"}}/>
@@ -119,7 +123,7 @@ class App extends Component {
         
           <aside style={{backgroundColor: "whitesmoke"}}>
               <div className="friendTab">
-                <Button variant="contained" style={{width : "100%"}}>friends</Button>
+                <Button variant="contained" style={{width : "100%"}}>FRIENDS</Button>
                 <div className="friends">
                   <Button>Bill Gates</Button>
                   <Button>Jeff Bezos</Button>
@@ -131,16 +135,16 @@ class App extends Component {
             </div>
               
               <div className="friendTab">
-                <Button  variant="contained" style={{width : "100%"}}>Your Subjects</Button>
+                <Button  variant="contained" style={{width : "100%"}}>YOUR SUBJECTS</Button>
                 <div className="friends">
-                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}}>*New Post* Linear Algebra</Button>
-                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}} >*New Post* Calculus</Button>
-                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>*New Post* Organic Chemistry</Button>
-                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>*New Post* British Literature: Charles Dickens</Button>
+                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}}>Linear Algebra</Button>
+                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}} >Calculus</Button>
+                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>Organic Chemistry</Button>
+                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>British Literature: Charles Dickens</Button>
                   </div>
               </div>
               <div className="colleges">
-                    <Button variant= "contained">Your Colleges</Button>
+                    <Button variant= "contained" style={{width : "100%"}}>Your Colleges</Button>
                     <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>College of Charleston</Button>
                     <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>Harvard University</Button>
                     <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>Oxford University</Button>
