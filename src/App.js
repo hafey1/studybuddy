@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Resources from './resources';
 import ViewRepo from './ViewRepo'
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import TableTest from './TableTest'
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -102,9 +103,13 @@ class App extends Component {
               variant="text"
               >
               
-              <Button>Account</Button>
+              <Button style={{color : "white"}}>Account</Button>
+               
               <IconButton>
-                <SettingsIcon/>
+                <NotificationsNoneIcon style={{color : "white"}}/>
+              </IconButton>
+              <IconButton>
+                <SettingsIcon style={{color : "white"}}/>
               </IconButton>
               
           
@@ -124,17 +129,14 @@ class App extends Component {
                   <Button>Baruch Spinoza</Button>
               </div>
             </div>
-            
-            <div className="favorites">
-              <div style={{backgroundColor: "rgba(208, 225, 241, .8)" }}></div>
               
               <div className="friendTab">
-              <Button  variant="contained" style={{width : "100%"}}>Your Subjects</Button>
-              <div className="friends">
-                    <Button>*New Post* Linear Algebra</Button>
-                    <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} >*New Post* Calculus</Button>
-                    <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>*New Post* Organic Chemistry</Button>
-                    <Button style={{backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>*New Post* British Literature: Charles Dickens</Button>
+                <Button  variant="contained" style={{width : "100%"}}>Your Subjects</Button>
+                <div className="friends">
+                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}}>*New Post* Linear Algebra</Button>
+                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}} >*New Post* Calculus</Button>
+                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>*New Post* Organic Chemistry</Button>
+                    <Button style={{borderRadius: "0%", backgroundColor : "rgba(251, 251, 251, .87)"}} disableElevation>*New Post* British Literature: Charles Dickens</Button>
                   </div>
               </div>
               <div className="colleges">
@@ -145,7 +147,6 @@ class App extends Component {
 
 
               </div>
-            </div>
             
               </aside>
               { this.state.landingPage ?
@@ -162,7 +163,7 @@ class App extends Component {
 
         </div>
         <footer>
-        <Button>Privacy Policy</Button>
+        <Button style={{fontFamily: "sans-serif"}}>Privacy Policy</Button>
          <Button>About Us</Button>
          <Button>Help</Button>
         </footer>
