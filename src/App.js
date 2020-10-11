@@ -2,6 +2,7 @@
 // Class to display: "College of Charleston CSCI 230"
 import React, { Component } from 'react';
 import './App.scss';
+import StudyBuddyDark from './Assets/Dark.png'
 import EmojiPeopleTwoToneIcon from '@material-ui/icons/EmojiPeopleTwoTone';
 import SearchIcon from '@material-ui/icons/Search';
 import IconButton from '@material-ui/core/IconButton';
@@ -94,7 +95,7 @@ class App extends Component {
     return (
       <div className="parent">
         <nav>
-          <EmojiPeopleTwoToneIcon className="emoji" />
+        <img src={StudyBuddyDark} style={{height: "100%", objectFit: "cover"}} alt="Logo" />
           
 
             <ButtonGroup className="signInSettings"
@@ -156,20 +157,28 @@ class App extends Component {
               { this.state.landingPage ?
           
                 <div className="backgroundSearchBar">   
-            <div className="searchbar">
-              <input 
-                type="text" 
-                placeholder="Search for your college, class, or classmate" 
-                onKeyPress={(e)=>this.searchResource(e)} />
-              <IconButton style= {{borderRadius: "0%", backgroundColor : "rgba(224,224,224, .6)" }} onClick={()=>{console.log(this.state.searchResult)}}><SearchIcon/></IconButton>
-              </div>
-            </div> : <div className="Repo"> <ViewRepo></ViewRepo></div>}
+                  <h1 className="motto ">Study materials from any student, <br></br>right at your fingertips</h1>
+                  <div className="searchbar">
+                    <input 
+                      type="text" 
+                      placeholder="Search for your college, class, or classmate" 
+                      onKeyPress={(e)=>this.searchResource(e)} />
+                    <IconButton style= {{borderRadius: "0%", backgroundColor : "rgba(224,224,224, .6)" }} onClick={()=>{console.log(this.state.searchResult)}}><SearchIcon/></IconButton>
+                  </div>
+                </div> : <div className="Repo"> <ViewRepo></ViewRepo></div>}
 
         </div>
         <footer>
-        <Button style={{fontFamily: "sans-serif"}}>Privacy Policy</Button>
-         <Button>About Us</Button>
-         <Button>Help</Button>
+          <ButtonGroup className="footerBox"
+                orientation="horizontal"
+                aria-label="horizontal primary button group"
+                variant="text"
+                >
+            <Button style={{color: "white", fontFamily: "sans-serif"}} >Github</Button>
+            <Button style={{color: "white", fontFamily: "sans-serif"}} >Privacy Policy</Button>
+            <Button style={{color: "white"}}>About Us</Button>
+            <Button style={{color: "white", fontFamily: "sans-serif"}} >Help</Button>
+         </ButtonGroup>
         </footer>
       </div>
     );
